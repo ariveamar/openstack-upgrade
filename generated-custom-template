@@ -1,0 +1,11 @@
+Generate Roles
+# openstack overcloud roles generate --roles-path /usr/share/openstack-tripleo-heat-templates/roles -o ~/templates/roles_data.yaml Controller ComputeInstanceHA ComputeHCI
+
+Generate Network
+
+# cd /usr/share/openstack-tripleo-heat-templates
+
+# ./tools/process-templates.py -o ~/openstack-tripleo-heat-templates-rendered -n /home/stack/network_data.yaml -r /home/stack/roles_data.yaml
+
+
+# cp -r ~/openstack-tripleo-heat-templates-rendered/network/config/multiple-nics/ ~/templates/custom-nics/
